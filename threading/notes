@@ -1,0 +1,27 @@
+/** Process: instance of a program
+    Has memory set aside for code and data
+    At least 1 thread and own registers/stack
+    Can add threads with its own register and stack and can access data in process
+    Data space not accessible by other processes, must use pipes and queues to share data
+
+    For a process to run it must acquire a global interpreter lock
+        - ensures thread safety
+        - prevents simultaneous multi-threading
+        - I/O thread performance remains relatively the same
+
+    OS controls the context switching
+    During an interrupt, we save the process 1 state into a process control block which holds the following:
+        - process state, number, counter
+        - registers
+        - memory limits
+        - list of open files
+    Reloads the state of the desired process
+
+    Number of cores = number of same time operations (parallelism)
+    Clock speed - number of operations per second (ex. 2ghz)
+
+    Thread: one set of operations assigned to a core, changing order between operations
+    Execute some other operations while another thread hangs, shift core's job (concurrent programming)
+
+    
+ **/
