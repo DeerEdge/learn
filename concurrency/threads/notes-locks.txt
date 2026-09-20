@@ -1,0 +1,9 @@
+Concurrency versus Parallelism
+
+Concurrency: structuring a program so tasks can be in progress at overlapping times, interleaving
+Parallelism: running at same time on different cores
+
+Atomic: an operation guaranteed to complete as one step, no lock and a single machine instruction
+Semaphore: counter initialized to N, acquire decrements, release increments, block at zero
+Mutex: mutual exclusion and when multiple states are being updated, notion of ownership where same thread locks/unlocks
+
